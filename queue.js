@@ -2,7 +2,7 @@ class Queue {
     constructor() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
+        this.length = 0;
     }
 
     push(x) {
@@ -14,7 +14,7 @@ class Queue {
             this.tail.next = temp;
             this.tail = temp;
         }
-        this.size++;
+        this.length++;
     }
 
     isEmpty() {
@@ -29,7 +29,7 @@ class Queue {
         if (!this.head) {
             return null;
         } else {
-            this.size--;
+            this.length--;
             const temp = this.head.next;
             const prev = this.head;
             this.head.next = null;
